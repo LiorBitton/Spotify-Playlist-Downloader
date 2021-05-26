@@ -8,7 +8,7 @@ This code does not correspond to the terms of Youtube and Spotify and so it shou
 
 ## Improvements
 
--   [ ] Allow download path selection
+-   [x] Allow download path selection
 -   [ ] Scrape more information about the playlist
 -   [ ] Convert the final files to mp3 instead of .webm
 -   [ ] Check if the youtube video contains the requested song
