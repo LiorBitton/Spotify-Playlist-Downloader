@@ -11,14 +11,16 @@ root.withdraw()
 root.attributes('-topmost', True)
 
 
-
 url = input("enter playlist link(must be public):")
+convert =True if (input("Do you want to convert the songs to mp3 from webm(requires ffmpeg) y/n: \n") == "y" ) else False
 open_file = filedialog.askdirectory()
 songs = listPlaylist.get_playlist_tracks(url)
 for song in songs:
 	downloadYT.title_to_mp3(song, open_file)
 	print("downloaded : " + song)
 	time.sleep(4)  #prevents from spamming the youtube download api
+if not convert:
+	quit()
 print("converting songs to mp3...")
 songs = os.listdir(open_file)
 """
