@@ -4,7 +4,7 @@ This code allows downloading a spotify playlist to local media files.
 
 ### note
 
-This code does not correspond to the terms of Youtube and Spotify and so it should not be used commercially and for personal purposes. This project serves a way to learn about web scraping in python.
+This code does not correspond to the terms of service of Youtube and Spotify and so it should not be used commercially and for personal purposes. This project serves a way to learn about web scraping in python.
 
 ## Improvements
 
