@@ -2,5 +2,5 @@
 .vscode/settings.json
 *.pyc
 t1.json
-t.htmml
+t.html
 temp.py

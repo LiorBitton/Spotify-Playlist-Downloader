@@ -1,11 +1,8 @@
-import requests
-import downloadYT
-import listPlaylist
-import downloadYT
+import requests, os
+import listPlaylist, downloadYT
+from song import Song
 import time,os.path
-
 from tkinter import Tk, filedialog
-import os
 root = Tk()
 root.withdraw()
 root.attributes('-topmost', True)
@@ -16,8 +13,8 @@ convert =True if (input("Do you want to convert the songs to mp3 from webm(requi
 open_file = filedialog.askdirectory()
 songs = listPlaylist.get_playlist_tracks(url)
 for song in songs:
-	downloadYT.title_to_mp3(song, open_file)
-	print("downloaded : " + song)
+	downloadYT.title_to_mp3(song.name + " by " + song.artist, open_file)
+	print("downloaded : " + song.name)
 	time.sleep(4)  #prevents from spamming the youtube download api
 if not convert:
 	quit()
