@@ -10,10 +10,3 @@ This code does not correspond to the terms of service of Youtube and Spotify and
 
 Run "download spotify playlist .py", from there the prompts are pretty much straight forward, if you want to convert the songs to
 mp3 instead of webm you need to [install ffmpeg](https://www.wikihow.com/Install-FFmpeg-on-Windows).
-
-## Improvements
-
--   [x] Allow download path selection
--   [x] Scrape more information about the playlist
--   [x] Convert the final files to mp3 instead of .webm
--   [ ] Check if the youtube video contains the requested song
