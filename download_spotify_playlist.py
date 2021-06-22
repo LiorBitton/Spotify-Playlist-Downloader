@@ -12,6 +12,7 @@ url = input("enter playlist link(must be public):")
 convert =True if (input("Do you want to convert the songs to mp3 from webm(requires ffmpeg) y/n: \n") == "y" ) else False
 open_file = filedialog.askdirectory()
 songs = listPlaylist.get_playlist_tracks(url)
+
 i = 1
 for song in songs:
 	try:
@@ -26,10 +27,7 @@ if not convert:
 	quit()
 print("converting songs to mp3...")
 songs = os.listdir(open_file)
-"""
-FILE="the-file-you-want-to-process.webm";
-ffmpeg -i "${FILE}" -vn -ab 128k -ar 44100 -y "${FILE%.webm}.mp3";
-"""
+
 webm_files = []
 for song in songs:
 	if (song.split(".")[-1] == "webm"):
