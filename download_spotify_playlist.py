@@ -1,5 +1,5 @@
 import requests, os
-import listPlaylist, downloadYT
+import list_spotify_playlist, download_youtube_video
 from song import Song
 import time,os.path
 from tkinter import Tk, filedialog
@@ -11,14 +11,14 @@ root.attributes('-topmost', True)
 url = input("enter playlist link(must be public):")
 convert =True if (input("Do you want to convert the songs to mp3 from webm(requires ffmpeg) y/n: \n") == "y" ) else False
 open_file = filedialog.askdirectory()
-songs = listPlaylist.get_playlist_tracks(url)
+songs = list_spotify_playlist.get_playlist_tracks(url)
 
 i = 1
 for song in songs:
 	try:
 		os.system("cls")
 		print("downloading : " + song.name + f" [{i}/{len(songs)}]")
-		downloadYT.title_to_mp3(song.name + " by " + song.artist, open_file)
+		download_youtube_video.title_to_mp3(song.name + " by " + song.artist, open_file)
 	except:
 		print("failed")
 	i=i+1
